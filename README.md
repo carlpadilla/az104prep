@@ -1,57 +1,37 @@
-# Project Name
+# Simple FastAPI AZD Template
 
-(short, 1-3 sentenced, description of the project)
+The most basic FastAPI "hello world" application as an AZD template ready for Azure App Service
 
-## Features
+![system diagram](diagram.png)
 
-This project framework provides the following features:
+## Usage
 
-* Feature 1
-* Feature 2
-* ...
+1. Install AZD and run the following command to initialize the project.
 
-## Getting Started
+```bash
+azd init --template Azure-Samples/simple-fastapi-azd
+```
 
-### Prerequisites
+This command will clone the code to your current folder and prompt you for the following information:
 
-(ideally very short, if any)
+- `Environment Name`: This will be used as a prefix for the resource group that will be created to hold all Azure resources. This name should be unique within your Azure subscription.
 
-- OS
-- Library version
-- ...
+2. Run the following command to build a deployable copy of your application, provision the template's infrastructure to Azure and also deploy the applciation code to those newly provisioned resources.
 
-### Installation
+```bash
+azd up
+```
 
-(ideally very short)
+This command will prompt you for the following information:
+- `Azure Location`: The Azure location where your resources will be deployed.
+- `Azure Subscription`: The Azure Subscription where your resources will be deployed.
 
-- npm install [package name]
-- mvn install
-- ...
+> NOTE: This may take a while to complete as it executes three commands: `azd package` (builds a deployable copy of your application), `azd provision` (provisions Azure resources), and `azd deploy` (deploys application code). You will see a progress indicator as it packages, provisions and deploys your application.
 
-### Quickstart
-(Add steps to get up and running quickly)
+3. Then make changes to app.py and run `azd deploy` again to update your changes.
 
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
+## Notes
 
+This uses the F1 (free) SKU for app service, which has limited CPU and RAM resources.
 
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+See the [pricing calculator](https://azure.microsoft.com/en-au/pricing/calculator/) for details on paid SKUs replace the SKU option with a suitable choice.
