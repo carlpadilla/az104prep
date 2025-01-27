@@ -9,7 +9,7 @@ The most basic FastAPI "hello world" application as an AZD template ready for Az
 1. Install AZD and run the following command to initialize the project.
 
 ```bash
-azd init --template Azure-Samples/simple-fastapi-azd
+azd init --template Azure-Samples/azd-simple-fastapi-appservice
 ```
 
 This command will clone the code to your current folder and prompt you for the following information:
