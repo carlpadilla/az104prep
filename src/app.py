@@ -7,7 +7,7 @@ app = FastAPI()
 @app.get("/")
 async def index():
     version = sys.version_info
-    return PlainTextResponse(content=f"Hello World, I am Python {version.major}.{version.minor}")
+    return PlainTextResponse(content=f"Hello World, I am a Hackerman! {version.major}.{version.minor}")
 
 if __name__ == '__main__':
     import uvicorn
