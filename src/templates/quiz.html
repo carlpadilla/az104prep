@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLI Quizzler</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}" />
+</head>
+<body>
+  <div class="cli-container">
+    <h1>CLI Quizzler</h1>
+    <div id="question-box">
+      <!-- Quiz question will load here -->
+    </div>
+    <!-- Added type="button" to prevent default form submission -->
+    <input type="text" id="answer-input" placeholder="Type your answer here..." />
+    <button id="submit-btn" type="button" onclick="submitAnswer()">Submit</button>
+    <div id="feedback"></div>
+  </div>
+  <script src="{{ url_for('static', path='script.js') }}"></script>
+</body>
+</html>

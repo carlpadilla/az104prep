@@ -1,0 +1,14 @@
+[
+    {
+        "question": "How do you list all files in a directory?",
+        "answer": "ls"
+    },
+    {
+        "question": "How do you display the current directory?",
+        "answer": "pwd"
+    },
+    {
+        "question": "How do you check if a remote host is reachable?",
+        "answer": "ping"
+    }
+]
